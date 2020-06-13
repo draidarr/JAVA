@@ -1,16 +1,16 @@
 package com.company;
+
 import java.io.File;
 
 public class Animal {
-    final String species;
-    Double weight;
-    String name;
-    File pic;
-
     static final Double DEFAULT_DOG_WEIGHT = 12.0;
     static final Double DEFAULT_CAT_WEIGHT = 2.0;
     static final Double DEFAULT_HORSE_WEIGHT = 1000.0;
     static final Double DEFAULT_WEIGHT = 10.0;
+    final String species;
+    Double weight;
+    String name;
+    File pic;
 
     public Animal(String species) {
         this.species = species;
@@ -42,5 +42,6 @@ public class Animal {
             this.weight--;
             System.out.println("thx for walk bro my weight is: " + this.weight);
         }
-    }}
+    }
+}
 
