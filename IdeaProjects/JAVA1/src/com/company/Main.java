@@ -14,10 +14,12 @@ public class Main {
             me.pet.takeForAWalk();
         }
         me.sal();
-        me.setSalary(5.0);
+        me.setSalary(11.0);
 
         Car beema = new Car("e46", "bmw");
-        me.getVehicle("beema");
-        me.setVehicle("beema");
+        Car renault = new Car("laguna", "renault");
+        me.getVehicle();
+        me.setVehicle(beema);
+        me.setVehicle(renault);
     }
 }

@@ -27,17 +27,17 @@ public class Human {
         }
     }
 
-    public String getVehicle(String which) {
-        return "whatever";
+    public Car getVehicle() {
+        return this.vehicle;
     }
 
-    public void setVehicle(String which) {
-        if (which == "beema") {
-            if (this.vehicle.value >= this.salary) {
-                System.out.println("Gz, you bought a new car");
-            } else if (this.vehicle.value >= this.salary) {
-                System.out.println("You bought a new car but you have to give us more money");
-            } else System.out.println("Get a new job instead of thinking about cars");
-        }
+    public void setVehicle(Car vehicle) {
+        if (vehicle.value < this.salary) {
+            System.out.println("Gz, you bought a new car");
+            this.vehicle = vehicle;
+        } else if (vehicle.value < this.salary / 12.0) {
+            System.out.println("You bought a new car but you have to give us more money");
+            this.vehicle = vehicle;
+        } else System.out.println("Get a new job instead of thinking about cars");
     }
 }
