@@ -10,5 +10,7 @@ public class Car {
         File pic;
 
     public Car(String model, String producer) {
+        this.model = model;
+        this.producer=producer;
     }
 }

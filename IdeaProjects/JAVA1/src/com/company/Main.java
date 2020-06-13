@@ -12,6 +12,7 @@ public class Main {
 	me.pet.feed();
 	for(int i=0;i<14;i++){
 		me.pet.takeForAWalk();}
-Car bmw = new Car("e46", "bmw");
+Car bmwe46 = new Car("e46", "bmw");
+	me.vehicle= bmwe46;
     }
 }
