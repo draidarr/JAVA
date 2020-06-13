@@ -10,8 +10,8 @@ public class Main {
 		Animal dog = new Animal("dog");
 	me.pet= dog;
 	me.pet.feed();
-	for(int i=0;i<15;i++){
+	for(int i=0;i<14;i++){
 		me.pet.takeForAWalk();}
-
+Car bmw = new Car("e46", "bmw");
     }
 }
