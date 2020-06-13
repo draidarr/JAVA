@@ -12,8 +12,8 @@ public class Human {
         System.out.println("Your salary was last seen at: " + LocalDateTime.now());
         System.out.println("Your salary is: " + this.salary);
     }
-    public void setsal(double x){
-        if (salary<=0){
+    public void setSalary(double x){
+        if (x<=0){
             System.out.println("It's inappropriate to steal from your employees");
         }
         else {

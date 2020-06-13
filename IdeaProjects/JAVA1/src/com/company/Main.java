@@ -15,6 +15,6 @@ public class Main {
 Car bmwe46 = new Car("e46", "bmw");
 	me.vehicle= bmwe46;
 		me.sal();
-		me.setsal(5.0);
+		me.setSalary(5.0);
     }
 }
