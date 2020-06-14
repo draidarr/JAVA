@@ -1,5 +1,7 @@
 package com.company;
 
+import devices.Car;
+
 import java.time.LocalDateTime;
 
 public class Human {
@@ -39,5 +41,9 @@ public class Human {
             System.out.println("You bought a new car but you have to give us more money");
             this.vehicle = vehicle;
         } else System.out.println("Get a new job instead of thinking about cars");
+    }
+
+    public String toString() {
+        return firstName + " " + lastName + " " + pet + " " + vehicle + " " + salary;
     }
 }

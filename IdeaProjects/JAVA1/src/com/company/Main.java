@@ -1,5 +1,7 @@
 package com.company;
 
+import devices.Car;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -21,5 +23,12 @@ public class Main {
         me.getVehicle();
         me.setVehicle(beema);
         me.setVehicle(renault);
+        if (beema.equals(renault) == true) System.out.println("Cars have the same price");
+        else System.out.println("Cars don't have the same price");
+        System.out.println(dog);
+        System.out.println(renault);
+        System.out.println(beema);
+        System.out.println(me);
+
     }
 }
