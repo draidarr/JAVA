@@ -1,9 +1,11 @@
 package devices;
 
+import com.company.Sellable;
+
 import java.io.File;
 import java.util.Objects;
 
-public class Car extends Device {
+public class Car extends Device implements Sellable {
     public Double weight;
     String plate;
     File pic;

@@ -9,6 +9,11 @@ public class Main {
         Human me = new Human();
         me.firstName = "Patryk";
         me.lastName = "Nawojczyk";
+        me.cash=10000.0;
+        Human you = new Human();
+        me.firstName = "Pioter";
+        me.lastName = "Kowalski";
+        me.cash=10000.0;
 
         Animal dog = new Animal("dog");
         me.pet = dog;
@@ -32,6 +37,6 @@ public class Main {
         System.out.println(beema);
         System.out.println(me);
         System.out.println(nokia);
-
+        me.sell(me, you, 2000.0);
     }
 }

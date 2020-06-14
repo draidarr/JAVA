@@ -1,6 +1,8 @@
 package devices;
 
-public class Phone extends Device {
+import com.company.Sellable;
+
+public class Phone extends Device implements Sellable {
     String os;
 
     public Phone(String model, String producer) {

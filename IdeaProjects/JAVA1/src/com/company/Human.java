@@ -1,15 +1,18 @@
 package com.company;
 
 import devices.Car;
+import devices.Phone;
 
 import java.time.LocalDateTime;
 
-public class Human {
+public class Human implements Sellable {
     String firstName;
     String lastName;
     Animal pet;
     private Car vehicle;
     private Double salary;
+    public Double cash;
+    Phone phone;
 
 
     public void sal() {
@@ -46,4 +49,37 @@ public class Human {
     public String toString() {
         return firstName + " " + lastName + " " + pet + " " + vehicle + " " + salary;
     }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (this.pet!=null) {
+            if (buyer.cash>price){
+                buyer.cash=buyer.cash-price;
+                seller.cash=seller.cash+price;
+                seller.pet=null;
+                buyer.pet=this.pet;
+            }
+            else System.out.println("You can't buy that");
+        }
+        else if (this.vehicle!=null){
+            if (buyer.cash>price){
+                buyer.cash=buyer.cash-price;
+                seller.cash=seller.cash+price;
+                seller.vehicle=null;
+                buyer.vehicle=this.vehicle;
+            }
+            else System.out.println("You can't buy that");
+        }
+        else if (this.phone!=null){
+            if (buyer.cash>price){
+                buyer.cash=buyer.cash-price;
+                seller.cash=seller.cash+price;
+                seller.phone=null;
+                buyer.phone=this.phone;
+            }
+            else System.out.println("You can't buy that");
+        }
+    }
 }
+
+

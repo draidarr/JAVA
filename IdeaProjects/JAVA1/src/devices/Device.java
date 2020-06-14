@@ -1,11 +1,14 @@
 package devices;
 
-public abstract class Device {
+import com.company.Human;
+import com.company.Sellable;
+
+public abstract class Device implements Sellable {
     public final String model;
     public final String producer;
     public int yearOfProduction;
     public double value;
-    double v;
+    double voltage;
 
     public Device(String model, String producer) {
         this.model = model;
@@ -18,4 +21,9 @@ public abstract class Device {
     }
 
     abstract public void turnOn();
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+
+    }
 }
