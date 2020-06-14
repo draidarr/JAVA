@@ -3,17 +3,13 @@ package devices;
 import java.io.File;
 import java.util.Objects;
 
-public class Car {
-    public final String model;
-    public final String producer;
+public class Car extends Device {
     public Double weight;
     String plate;
     File pic;
-    public double value;
 
     public Car(String model, String producer) {
-        this.model = model;
-        this.producer = producer;
+        super(model, producer);
         if (this.model == "e46" && this.producer == "bmw") {
             this.value = 5000.0;
         } else this.value = 10.0;
@@ -25,5 +21,10 @@ public class Car {
 
     public String toString() {
         return model + " " + producer + " " + value;
+    }
+
+    @Override
+    public void turnOn() {
+        System.out.println("Starting the system");
     }
 }

@@ -1,6 +1,7 @@
 package com.company;
 
 import devices.Car;
+import devices.Phone;
 
 public class Main {
 
@@ -20,6 +21,7 @@ public class Main {
 
         Car beema = new Car("e46", "bmw");
         Car renault = new Car("laguna", "renault");
+        Phone nokia = new Phone("3310", "nokia");
         me.getVehicle();
         me.setVehicle(beema);
         me.setVehicle(renault);
@@ -29,6 +31,7 @@ public class Main {
         System.out.println(renault);
         System.out.println(beema);
         System.out.println(me);
+        System.out.println(nokia);
 
     }
 }
