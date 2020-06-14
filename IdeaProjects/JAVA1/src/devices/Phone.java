@@ -1,5 +1,6 @@
 package devices;
 
+import com.company.Human;
 import com.company.Sellable;
 
 public class Phone extends Device implements Sellable {
@@ -15,5 +16,18 @@ public class Phone extends Device implements Sellable {
     @Override
     public void turnOn() {
         System.out.println("Starting the system");
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (seller.phone == this) {
+            if (buyer.cash != null && buyer.cash >= price) {
+                buyer.cash = buyer.cash - price;
+                seller.cash = seller.cash + price;
+                buyer.phone = seller.phone;
+                seller.phone = null;
+                System.out.println("You bought that");
+            } else System.out.println("You can't buy that");
+        } else System.out.println("Merchant doesn't have that item!");
     }
 }

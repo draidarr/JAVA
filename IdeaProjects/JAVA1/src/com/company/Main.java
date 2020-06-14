@@ -6,11 +6,11 @@ import devices.Phone;
 public class Main {
 
     public static void main(String[] args) {
-        Human me = new Human();
+        Human me = new Human("Human");
         me.firstName = "Patryk";
         me.lastName = "Nawojczyk";
         me.cash=10000.0;
-        Human you = new Human();
+        Human you = new Human("Human");
         me.firstName = "Pioter";
         me.lastName = "Kowalski";
         me.cash=10000.0;
@@ -18,11 +18,11 @@ public class Main {
         Animal dog = new Animal("dog");
         me.pet = dog;
         me.pet.feed();
-        for (int i = 0; i < 14; i++) {
+        for (int i = 0; i < 13; i++) {
             me.pet.takeForAWalk();
         }
         me.sal();
-        me.setSalary(11.0);
+        me.setSalary(5000.0);
 
         Car beema = new Car("e46", "bmw");
         Car renault = new Car("laguna", "renault");
@@ -37,6 +37,6 @@ public class Main {
         System.out.println(beema);
         System.out.println(me);
         System.out.println(nokia);
-        me.sell(me, you, 2000.0);
+        dog.sell(me, you, 2.0);
     }
 }

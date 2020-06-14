@@ -5,14 +5,18 @@ import devices.Phone;
 
 import java.time.LocalDateTime;
 
-public class Human implements Sellable {
+public class Human extends Animal implements Sellable {
     String firstName;
     String lastName;
     Animal pet;
-    private Car vehicle;
+    public Car vehicle;
     private Double salary;
     public Double cash;
-    Phone phone;
+    public Phone phone;
+
+    public Human(String species) {
+        super(species);
+    }
 
 
     public void sal() {
@@ -52,34 +56,10 @@ public class Human implements Sellable {
 
     @Override
     public void sell(Human seller, Human buyer, Double price) {
-        if (this.pet!=null) {
-            if (buyer.cash>price){
-                buyer.cash=buyer.cash-price;
-                seller.cash=seller.cash+price;
-                seller.pet=null;
-                buyer.pet=this.pet;
-            }
-            else System.out.println("You can't buy that");
-        }
-        else if (this.vehicle!=null){
-            if (buyer.cash>price){
-                buyer.cash=buyer.cash-price;
-                seller.cash=seller.cash+price;
-                seller.vehicle=null;
-                buyer.vehicle=this.vehicle;
-            }
-            else System.out.println("You can't buy that");
-        }
-        else if (this.phone!=null){
-            if (buyer.cash>price){
-                buyer.cash=buyer.cash-price;
-                seller.cash=seller.cash+price;
-                seller.phone=null;
-                buyer.phone=this.phone;
-            }
-            else System.out.println("You can't buy that");
-        }
+
     }
+
 }
+
 
 
