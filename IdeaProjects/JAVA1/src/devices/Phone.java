@@ -26,7 +26,7 @@ public class Phone extends Device implements Sellable {
                 seller.cash = seller.cash + price;
                 buyer.phone = seller.phone;
                 seller.phone = null;
-                System.out.println("You bought that");
+                System.out.println("You bought "+this);
             } else System.out.println("You can't buy that");
         } else System.out.println("Merchant doesn't have that item!");
     }

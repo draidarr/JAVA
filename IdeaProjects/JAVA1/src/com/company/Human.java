@@ -41,7 +41,7 @@ public class Human extends Animal implements Sellable {
     }
 
     public void setVehicle(Car vehicle) {
-        if (vehicle.value < this.salary) {
+        if (vehicle.value <= this.salary) {
             System.out.println("Gz, you bought a new car");
             this.vehicle = vehicle;
         } else if (vehicle.value < this.salary / 12.0) {

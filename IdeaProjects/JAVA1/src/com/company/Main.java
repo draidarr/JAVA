@@ -11,9 +11,9 @@ public class Main {
         me.lastName = "Nawojczyk";
         me.cash=10000.0;
         Human you = new Human("Human");
-        me.firstName = "Pioter";
-        me.lastName = "Kowalski";
-        me.cash=10000.0;
+        you.firstName = "Pioter";
+        you.lastName = "Kowalski";
+        you.cash=10000.0;
 
         Animal dog = new Animal("dog");
         me.pet = dog;
@@ -22,7 +22,7 @@ public class Main {
             me.pet.takeForAWalk();
         }
         me.sal();
-        me.setSalary(5000.0);
+        me.setSalary(4999.0);
 
         Car beema = new Car("e46", "bmw");
         Car renault = new Car("laguna", "renault");
@@ -30,13 +30,24 @@ public class Main {
         me.getVehicle();
         me.setVehicle(beema);
         me.setVehicle(renault);
-        if (beema.equals(renault) == true) System.out.println("Cars have the same price");
+        if (beema.equals(renault)) System.out.println("Cars have the same price");
         else System.out.println("Cars don't have the same price");
         System.out.println(dog);
         System.out.println(renault);
         System.out.println(beema);
         System.out.println(me);
         System.out.println(nokia);
-        dog.sell(me, you, 2.0);
+        try {
+            renault.sell(me, you, 2.0);
+        }
+        catch(Exception e){
+            System.out.println("Something went wrong.");
+        }
+        try {
+            beema.sell(me, you, 2.0);
+        }
+        catch(Exception e){
+            System.out.println("Something went wrong.");
+        }
     }
 }
