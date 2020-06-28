@@ -1,14 +1,15 @@
-package com.company;
+package creatures;
 
+import com.company.Sellable;
 import devices.Car;
 import devices.Phone;
 
 import java.time.LocalDateTime;
 
 public class Human extends Animal implements Sellable {
-    String firstName;
-    String lastName;
-    Animal pet;
+    public String firstName;
+    public String lastName;
+    public Animal pet;
     public Car vehicle;
     private Double salary;
     public Double cash;

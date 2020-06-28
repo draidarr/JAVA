@@ -1,6 +1,6 @@
 package devices;
 
-import com.company.Human;
+import creatures.Human;
 import com.company.Sellable;
 
 import java.io.File;

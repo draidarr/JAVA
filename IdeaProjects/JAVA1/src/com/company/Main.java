@@ -1,5 +1,8 @@
 package com.company;
 
+import creatures.Animal;
+import creatures.Human;
+import creatures.Pet;
 import devices.Car;
 import devices.Phone;
 
@@ -15,7 +18,7 @@ public class Main {
         you.lastName = "Kowalski";
         you.cash=10000.0;
 
-        Animal dog = new Animal("dog");
+        Pet dog = new Pet("dog");
         me.pet = dog;
         me.pet.feed();
         for (int i = 0; i < 13; i++) {
@@ -49,5 +52,6 @@ public class Main {
         catch(Exception e){
             System.out.println("Something went wrong.");
         }
+        dog.beEaten();
     }
 }
