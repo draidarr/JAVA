@@ -6,7 +6,7 @@ import com.company.Sellable;
 import java.io.File;
 import java.util.Objects;
 
-public class Car extends Device implements Sellable {
+public abstract class Car extends Device implements Sellable {
     public Double weight;
     String plate;
     File pic;
@@ -26,6 +26,7 @@ public class Car extends Device implements Sellable {
         return model + " " + producer + " " + value;
     }
 
+    abstract public void refuelCar();
     @Override
     public void turnOn() {
         System.out.println("Starting the system");

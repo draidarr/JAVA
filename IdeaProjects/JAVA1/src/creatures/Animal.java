@@ -66,21 +66,22 @@ public abstract class Animal implements Sellable, Edible, Feedable {
                     seller.cash = seller.cash + price;
                     buyer.pet = seller.pet;
                     seller.pet = null;
-                    System.out.println("You bought "+this);
+                    System.out.println("You bought " + this);
                 } else System.out.println("You can't buy that");
             } else System.out.println("Merchant doesn't have that item!");
         }
     }
-    public void beEaten(){
+
+    public void beEaten() {
         System.out.println("RIP IN PEPPERONI");
-        this.weight=0.0;
+        this.weight = 0.0;
     }
 
     public void feed(double foodWeight) {
         if (this.weight == 0.0) {
             System.out.println("am dead bro");
         } else {
-            this.weight=this.weight+foodWeight;
+            this.weight = this.weight + foodWeight;
             System.out.println("thx for food bro my weight is: " + this.weight);
         }
     }
