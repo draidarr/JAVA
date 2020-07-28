@@ -10,6 +10,7 @@ public abstract class Device implements Sellable {
     public double value;
     double voltage;
 
+
     public Device(String model, String producer) {
         this.model = model;
         this.producer = producer;
@@ -23,7 +24,8 @@ public abstract class Device implements Sellable {
     abstract public void turnOn();
 
     @Override
-    public void sell(Human seller, Human buyer, Double price) {
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
 
     }
+
 }

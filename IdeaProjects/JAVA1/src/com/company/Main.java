@@ -3,10 +3,7 @@ package com.company;
 import creatures.Animal;
 import creatures.Human;
 import creatures.Pet;
-import devices.Car;
-import devices.Diesel;
-import devices.Electric;
-import devices.Phone;
+import devices.*;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -32,13 +29,17 @@ public class Main {
         }
         me.sal();
         me.setSalary(4999.0);
+        you.setSalary(9999.0);
 
         Electric beema = new Electric("e46", "bmw");
         Diesel renault = new Diesel("laguna", "renault");
         Phone nokia = new Phone("3310", "nokia");
-        me.getVehicle();
-        me.setVehicle(beema);
-        me.setVehicle(renault);
+        ElPiDżi tesla = new ElPiDżi("3", "tesla");
+        me.getVehicle(1);
+        me.setVehicle(beema, 1);
+        me.setVehicle(renault, 1);
+        you.setVehicle(beema, 5);
+        you.setVehicle(tesla, 6);
         if (beema.equals(renault)) System.out.println("Cars have the same price");
         else System.out.println("Cars don't have the same price");
         System.out.println(dog);
@@ -70,5 +71,8 @@ public class Main {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
+        System.out.println(Arrays.toString(you.getGarage()));
+        you.valueAll();
+        me.valueAll();
     }
 }
